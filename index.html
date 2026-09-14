@@ -5,115 +5,381 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HidrolesteSP | Manutenção de Paleteiras Hidráulicas</title>
 <meta name="description" content="HidrolesteSP oferece manutenção, conserto, reparos e avaliação de paleteiras hidráulicas em Itaquaquecetuba-SP e região.">
-<link rel="canonical" href="https://josejorge47.github.io/HidrolesteSP/">
 <style>
+:root {
+  --navy: #080f18;
+  --navy2: #0f1c2e;
+  --orange-neon: #ff6a00;
+  --orange-bright: #ff3d00;
+  --orange-glow: rgba(255, 106, 0, 0.4);
+  --green-neon: #00e676;
+  --green-glow: rgba(0, 230, 118, 0.4);
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --bg: #f8fafc;
+  --white: #ffffff;
+  --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 10px 25px -5px var(--orange-glow);
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#f5f7f8;line-height:1.6}
-a{text-decoration:none}
-.container{width:min(1120px,92%);margin:auto}
-header{background:#fff;border-bottom:1px solid #e5e7e9;position:sticky;top:0;z-index:10}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900}.logo span{color:#e67e22}
-nav a{color:#273746;font-weight:700;margin-left:25px}
-.hero{background:linear-gradient(135deg,#121b23,#273746);color:#fff;padding:78px 0}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
-.tag{font-size:12px;letter-spacing:2px;font-weight:900;color:#e67e22;margin-bottom:12px}
-h1{font-size:clamp(38px,5vw,61px);line-height:1.06;margin-bottom:20px}
-h1 strong{color:#f39c12}.lead{font-size:19px;color:#dfe6e9;max-width:690px}
-.buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 22px;border-radius:9px;font-weight:900}
-.primary{background:#e67e22;color:#fff}.outline{border:1px solid #aab7b8;color:#fff}
-.photo{background:#fff;padding:9px;border-radius:18px;color:#17202a;font-weight:800;box-shadow:0 18px 45px #0005}
-.photo img{width:100%;height:480px;object-fit:cover;object-position:center;border-radius:12px;display:block}
-.photo div{padding:12px 7px 4px}
-.section{padding:78px 0}.section h2{font-size:38px;line-height:1.15;margin-bottom:24px}
-.intro{max-width:760px;color:#566573;font-size:18px;margin:-8px 0 30px}
-.services{background:#f5f7f8}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid #e5e7e9;border-radius:15px;padding:27px;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #00000012}
-.card span{font-size:32px}.card h3{font-size:20px;margin:11px 0 7px}.card p{color:#566573}
-.reasons{background:#fff}.reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.reason{padding:25px;border:1px solid #e5e7e9;border-radius:14px}.reason b{color:#e67e22;font-size:13px}.reason h3{margin:9px 0 6px}.reason p{color:#566573}
-.process{background:#17202a;color:#fff}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{border:1px solid #44515b;border-radius:14px;padding:24px}.step b{display:flex;width:38px;height:38px;border-radius:50%;align-items:center;justify-content:center;background:#e67e22;margin-bottom:12px}.step p{color:#dfe6e9}
-.about{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.about p:not(.tag){font-size:18px;color:#566573;max-width:700px}.about img{width:100%;max-height:520px;object-fit:cover;border-radius:16px}
-.location{font-weight:900!important;color:#17202a!important;margin-top:18px}
-.request{text-align:center;background:#f5f7f8}.request .intro{margin-left:auto;margin-right:auto}.request .btn{margin-top:4px}
-.contact{background:#17202a;color:#fff;border-radius:18px;padding:43px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact p:not(.tag){color:#dfe6e9}.whatsapp{background:#25d366;color:#fff;white-space:nowrap}
-footer{background:#111820;color:#bfc9ca;text-align:center;padding:25px;font-size:14px}
-@media(max-width:800px){nav{display:none}.hero-grid,.about{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.reason-grid,.process-grid{grid-template-columns:1fr 1fr}.photo img{height:410px}.contact{flex-direction:column;align-items:flex-start}}
-@media(max-width:520px){.cards,.reason-grid,.process-grid{grid-template-columns:1fr}.hero{padding:60px 0}.section{padding:60px 0}.photo img{height:370px}}
-.quick-contact{background:#25d366;color:#fff;padding:24px 0}.quick-contact .container{display:flex;align-items:center;justify-content:space-between;gap:20px}.quick-contact strong{display:block;font-size:21px}.quick-contact span{display:block;margin-top:3px}.quick-contact .btn{background:#fff;color:#17202a}.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:20;background:#25d366;color:#fff;border-radius:999px;padding:14px 20px;font-weight:900;box-shadow:0 8px 24px #0004;display:flex;align-items:center;gap:8px}.whatsapp-float:hover{transform:translateY(-2px)}@media(max-width:600px){.quick-contact .container{flex-direction:column;align-items:flex-start}.whatsapp-float{right:14px;bottom:14px;padding:13px 16px}.whatsapp-float span{display:inline}}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(226,232,240,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:26px;font-weight:950;letter-spacing:-1px}
+.logo span{background:linear-gradient(135deg, var(--orange-neon), var(--orange-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-size:15px;font-weight:700;color:#334155;transition:color .2s}
+nav a:hover{color:var(--orange-neon)}
+
+/* BOTÕES E EFEITOS DE ANIMAÇÃO */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+}
+
+/* Efeito Shimmer (Luz Passante) nos Botoes */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+.btn:hover::after {
+  left: 130%;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--orange-neon), var(--orange-bright));
+  color: #fff;
+  box-shadow: 0 10px 25px -5px var(--orange-glow);
+}
+
+.primary:hover {
+  box-shadow: 0 15px 35px -5px var(--orange-glow), 0 0 15px rgba(255, 106, 0, 0.5);
+}
+
+.outline {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.nav-cta {
+  background: var(--navy);
+  color: #fff!important;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.nav-cta:hover {
+  background: var(--orange-neon);
+  box-shadow: 0 8px 20px var(--orange-glow);
+}
+
+/* HERO SECTION */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 80% 20%, rgba(255,106,0,0.25), transparent 40%), linear-gradient(135deg, var(--navy) 0%, #0d1b2a 100%);padding:100px 0 90px}
+.hero:after{content:"";position:absolute;width:600px;height:600px;background:radial-gradient(circle, rgba(255,106,0,0.1) 0%, transparent 70%);right:-200px;top:-200px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;position:relative;z-index:1}
+.tag{display:inline-block;font-size:12px;letter-spacing:2px;font-weight:900;color:var(--orange-neon);text-transform:uppercase;margin-bottom:14px;background:rgba(255,106,0,0.1);padding:6px 12px;border-radius:30px;border:1px solid rgba(255,106,0,0.2)}
+.hero h1{font-size:clamp(42px,5.5vw,68px);line-height:1.05;letter-spacing:-2px;margin-bottom:22px;font-weight:900}
+.hero h1 strong{background:linear-gradient(135deg, #ff9d00, var(--orange-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.lead{font-size:19px;color:#94a3b8;max-width:650px}
+.buttons{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+
+.photo{background:rgba(255,255,255,0.05);padding:12px;border-radius:24px;color:var(--text);font-weight:850;box-shadow:0 30px 60px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(10px);transform:rotate(1.5deg);transition:transform 0.4s ease}
+.photo:hover{transform:rotate(0deg) scale(1.01)}
+.photo img{width:100%;height:460px;object-fit:cover;object-position:center;border-radius:16px;display:block}
+.photo div{padding:14px 8px 2px;color:#fff;font-size:16px}
+.photo small{display:block;color:#94a3b8;font-weight:600;margin-top:2px}
+
+/* QUICK CONTACT BAR */
+.quick-contact{background:linear-gradient(90deg, #00c853, var(--green-neon));color:#fff;box-shadow:0 10px 30px rgba(0,230,118,0.3)}
+.quick-contact .container{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}
+.quick-contact strong{display:block;font-size:22px;font-weight:900}
+.quick-contact span{display:block;margin-top:2px;color:#e8f5e9;font-weight:500}
+.quick-contact .btn{background:#fff;color:#052e16;box-shadow:0 10px 20px rgba(0,0,0,0.15)}
+.quick-contact .btn:hover{background:#f0fdf4;box-shadow:0 15px 30px rgba(0,0,0,0.25)}
+
+/* SECTIONS */
+.section{padding:96px 0}
+.section h2{font-size:clamp(32px,4vw,46px);line-height:1.1;letter-spacing:-1.5px;margin-bottom:18px;font-weight:900}
+.intro{max-width:760px;color:var(--muted);font-size:18px;margin:-3px 0 40px}
+
+/* CARDS E SERVIÇOS */
+.services{background:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;min-height:210px;box-shadow:var(--shadow-lg);transition:all 0.35s cubic-bezier(0.4,0,0.2,1);overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg, var(--orange-neon), var(--orange-bright));opacity:0;transition:opacity 0.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 25px 45px -10px rgba(0,0,0,0.1);border-color:transparent}
+.card:hover:before{opacity:1}
+.card span{font-size:36px;display:block;margin-bottom:14px;transition:transform 0.3s}
+.card:hover span{transform:scale(1.15) rotate(-5deg)}
+.card h3{font-size:21px;margin-bottom:8px;letter-spacing:-0.5px;font-weight:800}
+.card p{color:var(--muted);font-size:15px;line-height:1.6}
+
+/* REASONS */
+.reasons{background:#fff}
+.reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.reason{padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg, #fff, #f8fafc);transition:transform 0.3s, border-color 0.3s}
+.reason:hover{transform:translateY(-5px);border-color:var(--orange-neon)}
+.reason b{color:var(--orange-neon);font-size:14px;letter-spacing:1.5px;font-weight:900}
+.reason h3{font-size:19px;margin:12px 0 8px;font-weight:800}
+.reason p{color:var(--muted);font-size:14.5px}
+
+/* PROCESS SECTION */
+.process{background:var(--navy2);color:#fff;position:relative}
+.process .tag{color:var(--orange-neon);background:rgba(255,106,0,0.15)}
+.process h2{color:#fff}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);backdrop-filter:blur(5px);border-radius:20px;padding:28px;transition:all 0.3s ease}
+.step:hover{background:rgba(255,255,255,0.08);transform:translateY(-5px);border-color:rgba(255,106,0,0.5)}
+.step b{display:flex;width:46px;height:46px;border-radius:14px;align-items:center;justify-content:center;background:linear-gradient(135deg, var(--orange-neon), var(--orange-bright));margin-bottom:18px;font-size:18px;color:#fff;box-shadow:0 8px 20px var(--orange-glow)}
+.step h3{font-size:19px;margin-bottom:8px;font-weight:800}
+.step p{color:#94a3b8;font-size:14.5px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
+.about p:not(.tag){font-size:18px;color:var(--muted);max-width:700px;line-height:1.7}
+.about img{width:100%;height:450px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-lg)}
+.location{font-weight:850!important;color:var(--text)!important;margin-top:20px}
+
+/* REQUEST BOX */
+.request{text-align:center;background:linear-gradient(180deg, var(--bg), #fff)}
+.request-box{max-width:850px;margin:auto;background:linear-gradient(135deg, #ffffff, #f8fafc);border:1px solid var(--line);border-radius:28px;padding:60px 30px;box-shadow:0 20px 50px rgba(0,0,0,0.06)}
+
+/* CONTACT FOOTER CTA */
+.contact{background:linear-gradient(135deg, var(--navy), var(--navy2));color:#fff;border-radius:28px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:0 25px 50px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08)}
+.contact p:not(.tag){color:#94a3b8;font-size:17px}
+.contact h2{margin-bottom:10px}
+
+.whatsapp{
+  background:linear-gradient(135deg, #00e676, #00c853);
+  color:#fff;
+  white-space:nowrap;
+  box-shadow:0 10px 25px var(--green-glow);
+}
+.whatsapp:hover{
+  box-shadow:0 15px 35px var(--green-glow), 0 0 20px rgba(0, 230, 118, 0.6);
+}
+
+footer{background:#04080e;color:#64748b;text-align:center;padding:32px;font-size:14px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-brand{color:#fff;font-weight:900}
+.footer-brand span{color:var(--orange-neon)}
+
+/* WHATSAPP FLOAT + PULSE ANIMATION */
+.whatsapp-float{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:60;
+  background:linear-gradient(135deg, #00e676, #00c853);
+  color:#fff;
+  border:2px solid rgba(255,255,255,0.4);
+  border-radius:999px;
+  padding:12px 22px 12px 14px;
+  font-weight:900;
+  box-shadow:0 10px 30px rgba(0,230,118,0.4);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:all 0.3s ease;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(0, 230, 118, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+  }
+}
+
+.whatsapp-float .wa-icon{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.25);
+  font-size:22px;
+}
+.whatsapp-float:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+@media(max-width:850px){
+  nav a:not(.nav-cta){display:none}
+  .hero{padding:70px 0}
+  .hero-grid,.about{grid-template-columns:1fr}
+  .photo{transform:none}
+  .photo img{height:380px}
+  .cards{grid-template-columns:1fr 1fr}
+  .reason-grid,.process-grid{grid-template-columns:1fr 1fr}
+  .contact{flex-direction:column;align-items:flex-start}
+  .section{padding:70px 0}
+}
+@media(max-width:560px){
+  .nav{height:68px}
+  .logo{font-size:22px}
+  .nav-cta{padding:9px 14px;font-size:13px}
+  .hero h1{letter-spacing:-1px}
+  .photo img{height:320px}
+  .cards,.reason-grid,.process-grid{grid-template-columns:1fr}
+  .quick-contact .container{padding:20px 0;flex-direction:column;align-items:flex-start}
+  .quick-contact .btn{width:100%}
+  .request-box{padding:40px 20px}
+  .contact{padding:32px 20px}
+  .whatsapp-float{right:16px;bottom:16px;padding:8px 16px 8px 10px}
+  .whatsapp-float .wa-icon{width:34px;height:34px;font-size:18px}
+}
 </style>
 </head>
 <body>
+
 <header><div class="container nav">
 <div class="logo">Hidro<span>lesteSP</span></div>
-<nav><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+<nav>
+  <a href="#servicos">Serviços</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+  <a class="btn nav-cta" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">WhatsApp</a>
+</nav>
 </div></header>
 
 <section class="hero"><div class="container hero-grid">
 <div>
-<p class="tag">ASSISTÊNCIA PROFISSIONAL</p>
+<span class="tag">⚡ ASSISTÊNCIA RÁPIDA E PROFISSIONAL</span>
 <h1>Manutenção e conserto de <strong>paleteiras hidráulicas</strong></h1>
-<p class="lead">Está com qualquer problema em sua paleteira hidráulica? A HidrolesteSP oferece atendimento para avaliação, manutenção e reparos.</p>
-<div class="buttons"><a class="btn primary" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">📱 Falar pelo WhatsApp</a><a class="btn outline" href="#servicos">Ver serviços</a></div>
+<p class="lead">Sua empresa não pode parar. A HidrolesteSP oferece atendimento de alta qualidade para avaliação, manutenção preventiva e reparos urgentes.</p>
+<div class="buttons">
+  <a class="btn primary" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+  <a class="btn outline" href="#servicos">Conhecer serviços</a>
 </div>
-<div class="photo"><img src="foto-servico.jpg" alt="Serviço realizado pela HidrolesteSP"><div>Serviço realizado pela HidrolesteSP</div></div>
+</div>
+<div class="photo">
+  <img src="foto-servico.jpg" alt="Serviço realizado pela HidrolesteSP">
+  <div>Serviço realizado pela HidrolesteSP</div>
+  <small>Manutenção e reparos em paleteiras hidráulicas</small>
+</div>
+</div></section>
+
+<section class="quick-contact"><div class="container">
+<div>
+  <strong>Está com problema na paleteira?</strong>
+  <span>Fale diretamente pelo WhatsApp e receba suporte imediato.</span>
+</div>
+<a class="btn" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">Chamar no WhatsApp</a>
 </div></section>
 
 <section id="servicos" class="section services"><div class="container">
-<p class="tag">NOSSOS SERVIÇOS</p><h2>Ajuda para diferentes problemas em paleteiras</h2>
-<p class="intro">A HidrolesteSP atende quem precisa de avaliação, manutenção ou reparo em paleteiras hidráulicas.</p>
+<span class="tag">NOSSOS SERVIÇOS</span>
+<h2>Soluções completas para suas paleteiras</h2>
+<p class="intro">A HidrolesteSP atende quem precisa de avaliação rápida, manutenção técnica confiável e reparos eficientes.</p>
 <div class="cards">
-<div class="card"><span>🔧</span><h3>Manutenção</h3><p>Revisão e manutenção de paleteiras hidráulicas.</p></div>
-<div class="card"><span>⚙️</span><h3>Consertos e reparos</h3><p>Atendimento para diferentes problemas apresentados pelo equipamento.</p></div>
-<div class="card"><span>🛠️</span><h3>Problemas hidráulicos</h3><p>Avaliação de falhas no sistema hidráulico e componentes.</p></div>
-<div class="card"><span>🔩</span><h3>Troca de componentes</h3><p>Substituição de peças quando identificada a necessidade.</p></div>
-<div class="card"><span>🔍</span><h3>Avaliação</h3><p>Verificação do problema para entender o serviço necessário.</p></div>
-<div class="card"><span>📞</span><h3>Orçamento</h3><p>Entre em contato pelo WhatsApp para solicitar atendimento.</p></div>
+<div class="card"><span>🔧</span><h3>Manutenção</h3><p>Revisão preventiva e corretiva completa de paleteiras hidráulicas.</p></div>
+<div class="card"><span>⚙️</span><h3>Consertos e reparos</h3><p>Solução eficaz para falhas mecânicas e desgastes do dia a dia.</p></div>
+<div class="card"><span>🛠️</span><h3>Problemas hidráulicos</h3><p>Diagnóstico e reparo avançado de vazamentos e perda de pressão.</p></div>
+<div class="card"><span>🔩</span><h3>Troca de componentes</h3><p>Substituição de peças por componentes duráveis e compatíveis.</p></div>
+<div class="card"><span>🔍</span><h3>Avaliação Técnica</h3><p>Verificação minuciosa para encontrar a causa exata do problema.</p></div>
+<div class="card"><span>📞</span><h3>Orçamento Rápido</h3><p>Envie detalhes pelo WhatsApp para um atendimento agilizado.</p></div>
 </div></div></section>
 
 <section class="section reasons"><div class="container">
-<p class="tag">POR QUE A HIDROLESTESP?</p><h2>Atendimento pensado para resolver seu problema</h2>
+<span class="tag">DIFERENCIAIS</span>
+<h2>Por que escolher a HidrolesteSP?</h2>
 <div class="reason-grid">
-<div class="reason"><b>01</b><h3>Atendimento profissional</h3><p>Serviço voltado para manutenção e reparos de paleteiras hidráulicas.</p></div>
-<div class="reason"><b>02</b><h3>Diagnóstico</h3><p>Avaliação do equipamento para entender o que precisa ser reparado.</p></div>
-<div class="reason"><b>03</b><h3>Itaquaquecetuba e região</h3><p>Atendimento normalmente realizado em toda a região de Itaquaquecetuba-SP.</p></div>
-<div class="reason"><b>04</b><h3>Contato rápido</h3><p>Fale pelo WhatsApp e explique o problema da sua paleteira.</p></div>
+<div class="reason"><b>01</b><h3>Atendimento profissional</h3><p>Foco exclusivo na manutenção e eficiência de paleteiras hidráulicas.</p></div>
+<div class="reason"><b>02</b><h3>Diagnóstico Preciso</h3><p>Avaliação detalhada para solucionar o defeito com precisão e economia.</p></div>
+<div class="reason"><b>03</b><h3>Itaquaquecetuba e Região</h3><p>Atendimento local e regional com agilidade no agendamento.</p></div>
+<div class="reason"><b>04</b><h3>Contato Direto</h3><p>Fale diretamente com quem entende do assunto pelo WhatsApp.</p></div>
 </div></div></section>
 
 <section class="section process"><div class="container">
-<p class="tag">COMO FUNCIONA</p><h2>É simples solicitar atendimento</h2>
+<span class="tag">PASSO A PASSO</span>
+<h2>Como funciona o atendimento</h2>
 <div class="process-grid">
-<div class="step"><b>1</b><h3>Fale conosco</h3><p>Chame a HidrolesteSP pelo WhatsApp.</p></div>
-<div class="step"><b>2</b><h3>Explique o problema</h3><p>Conte o que está acontecendo com sua paleteira.</p></div>
-<div class="step"><b>3</b><h3>Envie fotos</h3><p>Fotos podem ajudar na avaliação inicial.</p></div>
-<div class="step"><b>4</b><h3>Combine o atendimento</h3><p>Verifique atendimento e orçamento.</p></div>
+<div class="step"><b>1</b><h3>Fale Conosco</h3><p>Entre em contato via WhatsApp com nossa equipe.</p></div>
+<div class="step"><b>2</b><h3>Explique o Defeito</h3><p>Nos conte o que a paleteira está apresentando.</p></div>
+<div class="step"><b>3</b><h3>Envie Fotos</h3><p>Envie fotos ou vídeos do equipamento para agilizar a análise.</p></div>
+<div class="step"><b>4</b><h3>Combine o Serviço</h3><p>Receba o orçamento e agende o atendimento técnico.</p></div>
 </div></div></section>
 
 <section id="sobre" class="section"><div class="container about">
-<div><p class="tag">HIDROLESTESP</p><h2>Profissionalismo e atenção ao seu equipamento</h2>
-<p>A HidrolesteSP oferece serviços para quem estiver com qualquer tipo de problema em sua paleteira hidráulica. O objetivo é avaliar o equipamento e buscar uma solução adequada para cada situação.</p>
-<p class="location">📍 Atendimento normalmente realizado em toda a região de Itaquaquecetuba-SP.</p></div>
+<div>
+  <span class="tag">SOBRE A HIDROLESTESP</span>
+  <h2>Qualidade e compromisso com seu equipamento</h2>
+  <p>A HidrolesteSP é especializada em soluções para paleteiras hidráulicas. Nosso objetivo é garantir que seu equipamento volte a funcionar com total segurança e máximo rendimento operacional.</p>
+  <p class="location">📍 Atendimento realizado em toda a região de Itaquaquecetuba-SP.</p>
+</div>
 <img src="foto-servico.jpg" alt="HidrolesteSP trabalhando em uma paleteira">
 </div></section>
 
-<section class="section request"><div class="container">
-<p class="tag">SOLICITE ATENDIMENTO</p><h2>Explique o problema da sua paleteira</h2>
-<p class="intro">Você pode explicar o que está acontecendo e enviar fotos do equipamento diretamente pelo WhatsApp.</p>
+<section class="section request"><div class="container"><div class="request-box">
+<span class="tag">SOLICITAR ORÇAMENTO</span>
+<h2>Precisa arrumar sua paleteira hoje?</h2>
+<p class="intro">Explique o problema e envie imagens do equipamento para receber uma resposta rápida.</p>
 <a class="btn primary" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20gostaria%20de%20solicitar%20atendimento%20para%20minha%20paleteira%20hidr%C3%A1ulica.%20O%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Solicitar orçamento pelo WhatsApp</a>
-</div></section>
-
-<section class="quick-contact"><div class="container"><div><strong>Está com problema na paleteira?</strong><span>Fale diretamente pelo WhatsApp e explique o que aconteceu.</span></div><a class="btn whatsapp" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">📱 Chamar no WhatsApp</a></div></section>
+</div></div></section>
 
 <section id="contato" class="section"><div class="container contact">
-<div><p class="tag">FALE CONOSCO</p><h2>Precisa de um profissional?</h2><p>Explique o problema da sua paleteira e solicite atendimento.</p></div>
-<a class="btn whatsapp" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">📱 Falar pelo WhatsApp</a>
+<div>
+  <span class="tag" style="color:var(--orange-neon); background:rgba(255,106,0,0.15)">FALE CONOSCO</span>
+  <h2>Pronto para resolver o problema?</h2>
+  <p>Chame agora e tire suas dúvidas sobre manutenção e prazos.</p>
+</div>
+<a class="btn whatsapp" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
 </div></section>
 
-<footer>© 2026 HidrolesteSP — Manutenção, conserto e reparo de paleteiras hidráulicas em Itaquaquecetuba-SP e região.</footer>
-<a class="whatsapp-float" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar com a HidrolesteSP pelo WhatsApp">💬 <span>WhatsApp</span></a>
-</body></html>
+<footer>© 2026 <span class="footer-brand">Hidro<span>lesteSP</span></span> — Manutenção, conserto e reparo de paleteiras hidráulicas em Itaquaquecetuba-SP e região.</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5511939559739?text=Ol%C3%A1%20HidrolesteSP%2C%20estou%20com%20um%20problema%20em%20uma%20paleteira%20hidr%C3%A1ulica%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar com a HidrolesteSP pelo WhatsApp">
+  <span class="wa-icon">✆</span>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>
